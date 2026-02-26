@@ -1,155 +1,20 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Plataforma de Pagos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
+<section id="hoja-vida" class="card" aria-labelledby="hv-title">
+  <div class="card-inner">
+    <h2 id="hv-title">Camilo Pérez — Desarrollador Frontend</h2>
+    <p><strong>Formación:</strong> Ingeniería de Sistemas, Universidad X</p>
+    <p><strong>Contacto:</strong> camilo@example.com</p>
+    <p><strong>Repositorios:</strong> <a href="https://github.com/camilo" target="_blank" rel="noopener">github.com/camilo</a></p>
+    <ul>
+      <li>Especialidad: UI/UX y microinteracciones</li>
+      <li>Herramientas: HTML, CSS, JavaScript, Git</li>
+    </ul>
+  </div>
+</section>
 
-    <!-- Navegación -->
-    <header>
-        <div>
-            <h2>PayFlow</h2>
-            <nav>
-                <a href="#productos">Productos</a> |
-                <a href="#desarrolladores">Desarrolladores</a> |
-                <a href="#precios">Precios</a> |
-                <a href="#contacto">Contacto</a>
-            </nav>
-            <button>Iniciar sesión</button>
-        </div>
-    </header>
-
-    <hr>
-
-    <!-- Hero Section -->
-    <section>
-        <h1>Infraestructura financiera para internet</h1>
-        <p>
-            Acepta pagos, envía dinero y administra tu negocio online con una sola integración.
-        </p>
-        <button>Comenzar ahora</button>
-        <button>Hablar con ventas</button>
-    </section>
-
-    <hr>
-
-    <!-- Logos / Confianza -->
-    <section>
-        <p>Empresas que confían en nosotros:</p>
-        <ul>
-            <li>TechCorp</li>
-            <li>ShopGlobal</li>
-            <li>FastDelivery</li>
-            <li>CloudMarket</li>
-        </ul>
-    </section>
-
-    <hr>
-
-    <!-- Productos -->
-    <section id="productos">
-        <h2>Una plataforma, todas las soluciones</h2>
-
-        <article>
-            <h3>Pagos Online</h3>
-            <p>Acepta tarjetas, transferencias y billeteras digitales en todo el mundo.</p>
-        </article>
-
-        <article>
-            <h3>Facturación</h3>
-            <p>Automatiza suscripciones y pagos recurrentes.</p>
-        </article>
-
-        <article>
-            <h3>Pagos internacionales</h3>
-            <p>Opera globalmente con soporte multi-moneda.</p>
-        </article>
-    </section>
-
-    <hr>
-
-    <!-- Sección para desarrolladores -->
-    <section id="desarrolladores">
-        <h2>Diseñado para desarrolladores</h2>
-        <p>Integra nuestra API en minutos con documentación clara y SDKs modernos.</p>
-
-        <pre>
-<code>
-curl https://api.payflow.com/v1/pagos \
-  -u sk_test_xxxxx: \
-  -d amount=2000 \
-  -d currency="usd"
-</code>
-        </pre>
-
-        <button>Ver documentación</button>
-    </section>
-
-    <hr>
-
-    <!-- Seguridad -->
-    <section>
-        <h2>Seguridad y cumplimiento</h2>
-        <p>
-            Cumplimos con los estándares internacionales de seguridad y protección de datos.
-        </p>
-        <ul>
-            <li>Encriptación avanzada</li>
-            <li>Monitoreo antifraude</li>
-            <li>Cumplimiento PCI</li>
-        </ul>
-    </section>
-
-    <hr>
-
-    <!-- Precios -->
-    <section id="precios">
-        <h2>Precios simples y transparentes</h2>
-        <p>Sin tarifas ocultas.</p>
-        <h3>2.9% + $0.30 por transacción</h3>
-        <button>Crear cuenta gratuita</button>
-    </section>
-
-    <hr>
-
-    <!-- CTA Final -->
-    <section>
-        <h2>Empieza a aceptar pagos hoy</h2>
-        <p>Crea tu cuenta y comienza en minutos.</p>
-        <button>Comenzar ahora</button>
-    </section>
-
-    <hr>
-
-    <!-- Footer -->
-    <footer id="contacto">
-        <div>
-            <h4>PayFlow</h4>
-            <p>© 2026 PayFlow, Inc.</p>
-        </div>
-
-        <div>
-            <h4>Productos</h4>
-            <ul>
-                <li>Pagos</li>
-                <li>Facturación</li>
-                <li>API</li>
-            </ul>
-        </div>
-
-        <div>
-            <h4>Compañía</h4>
-            <ul>
-                <li>Sobre nosotros</li>
-                <li>Blog</li>
-                <li>Soporte</li>
-            </ul>
-        </div>
-    </footer>
-    <script src="./js/app.js"></script>
-
-</body>
-</html>
+<!-- Initialize optional tilt and ripple modules -->
+<script type="module">
+  import { initButtonRipple } from './js/button-ripple.js';
+  import { initCardTilt } from './js/card-lazy.js';
+  initButtonRipple('.btn');
+  initCardTilt('.card');
+</script>
