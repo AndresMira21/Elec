@@ -1,0 +1,37 @@
+form {
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+input.invalid, textarea.invalid {
+    border-color: red;
+    background-color: #ffe6e6;
+}
+
+input.valid, textarea.valid {
+    border-color: green;
+    background-color: #e6ffe6;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    height: 14px;
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
