@@ -270,3 +270,39 @@ footer li {
     }
 
 }
+
+/* =====================================
+   HOJA DE VIDA
+===================================== */
+
+#hojas-vida {
+    text-align: center;
+}
+
+#hojas-vida .cv {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    max-width: 500px;
+    margin: 2rem auto 0 auto;
+    transition: var(--transition);
+}
+
+#hojas-vida .cv:hover {
+    transform: translateY(-5px);
+}
+
+#hojas-vida h3 {
+    color: var(--primary);
+}
+
+#hojas-vida a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#hojas-vida a:hover {
+    text-decoration: underline;
+}
