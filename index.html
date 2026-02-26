@@ -5,6 +5,7 @@
     <title>Plataforma de Pagos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="css/navbar-behavior.css">
 </head>
 <body>
 
@@ -124,6 +125,26 @@ curl https://api.payflow.com/v1/pagos \
 
     <hr>
 
+    <!-- Hojas de vida -->
+    <section id="hojas-vida">
+        <h2>Hoja de vida</h2>
+
+        <article class="cv">
+            <h3>Tu Nombre</h3>
+            <p><strong>Formación:</strong> Estudiante de Ingeniería de Sistemas</p>
+            <p><strong>Email:</strong> tunombre@mail.com</p>
+            <p><strong>Perfil:</strong> Desarrollador web en formación con interés en frontend.</p>
+            <p>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/tuusuario" target="_blank">
+                    https://github.com/tuusuario
+                </a>
+            </p>
+        </article>
+    </section>
+
+    <hr>
+
     <!-- Footer -->
     <footer id="contacto">
         <div>
@@ -149,7 +170,8 @@ curl https://api.payflow.com/v1/pagos \
             </ul>
         </div>
     </footer>
-    <script src="./js/app.js"></script>
 
+    <script src="./js/app.js"></script>
+    <script src="js/navbar-behavior.js" defer></script>
 </body>
 </html>
