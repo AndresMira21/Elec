@@ -56,3 +56,29 @@ function validarFormulario() {
 nombre.addEventListener("input", validarFormulario);
 email.addEventListener("input", validarFormulario);
 mensaje.addEventListener("input", validarFormulario);
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    submitBtn.textContent = "Enviando...";
+    submitBtn.disabled = true;
+    submitBtn.classList.add("loading");
+
+    setTimeout(() => {
+        submitBtn.textContent = "Enviado ✔";
+        submitBtn.classList.remove("loading");
+
+        form.reset();
+        submitBtn.disabled = true;
+
+        const inputs = form.querySelectorAll("input, textarea");
+        inputs.forEach(input => {
+            input.classList.remove("valid");
+        });
+
+        setTimeout(() => {
+            submitBtn.textContent = "Enviar";
+        }, 2000);
+
+    }, 2000);
+});
