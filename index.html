@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <title>Plataforma de Pagos</title>
@@ -11,15 +11,24 @@
 
     <!-- Navegación -->
     <header>
-        <div>
+        <div class="container">
             <h2>PayFlow</h2>
+
             <nav>
                 <a href="#productos">Productos</a> |
                 <a href="#desarrolladores">Desarrolladores</a> |
                 <a href="#precios">Precios</a> |
                 <a href="#contacto">Contacto</a>
             </nav>
-            <button>Iniciar sesión</button>
+
+            <div class="header-actions">
+                <button class="btn btn--primary">Iniciar sesión</button>
+
+                <!-- Toggle Dark Mode -->
+                <button id="theme-toggle" class="btn btn--ghost" type="button" aria-label="Alternar tema">
+                    🌙
+                </button>
+            </div>
         </div>
     </header>
 
@@ -31,8 +40,8 @@
         <p>
             Acepta pagos, envía dinero y administra tu negocio online con una sola integración.
         </p>
-        <button>Comenzar ahora</button>
-        <button>Hablar con ventas</button>
+        <button class="btn btn--primary">Comenzar ahora</button>
+        <button class="btn btn--ghost">Hablar con ventas</button>
     </section>
 
     <hr>
@@ -86,7 +95,7 @@ curl https://api.payflow.com/v1/pagos \
 </code>
         </pre>
 
-        <button>Ver documentación</button>
+        <button class="btn btn--ghost">Ver documentación</button>
     </section>
 
     <hr>
@@ -111,7 +120,7 @@ curl https://api.payflow.com/v1/pagos \
         <h2>Precios simples y transparentes</h2>
         <p>Sin tarifas ocultas.</p>
         <h3>2.9% + $0.30 por transacción</h3>
-        <button>Crear cuenta gratuita</button>
+        <button class="btn btn--primary">Crear cuenta gratuita</button>
     </section>
 
     <hr>
@@ -150,7 +159,7 @@ curl https://api.payflow.com/v1/pagos \
     <section>
         <h2>Empieza a aceptar pagos hoy</h2>
         <p>Crea tu cuenta y comienza en minutos.</p>
-        <button>Comenzar ahora</button>
+        <button class="btn btn--primary">Comenzar ahora</button>
     </section>
 
     <hr>
@@ -180,8 +189,8 @@ curl https://api.payflow.com/v1/pagos \
             </ul>
         </div>
     </footer>
-    <script src="./js/app.js"></script>
-    <script src="./js/form.js"></script>
 
+    <script src="./js/app.js"></script>
+    <script src="./js/dark-mode.js"></script>
 </body>
 </html>
