@@ -1,0 +1,8 @@
+nav {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-scroll {
+  background-color: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
