@@ -1,0 +1,67 @@
+/* css/buttons.css - Microinteracciones reutilizables */
+:root{
+  --btn-bg: #0a84ff;
+  --btn-color: #ffffff;
+  --btn-radius: 10px;
+  --btn-padding: 0.6rem 1rem;
+  --btn-transition: 220ms cubic-bezier(.2,.8,.2,1);
+  --ripple-color: rgba(255,255,255,0.35);
+}
+
+/* Base button */
+.btn{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform var(--btn-transition), box-shadow var(--btn-transition), background var(--btn-transition);
+  will-change: transform;
+  font: inherit;
+}
+
+/* Hover microinteraction */
+.btn:hover{
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 10px 24px rgba(10,20,40,0.12);
+}
+
+/* Focus visible for accessibility */
+.btn:focus{
+  outline: 3px solid rgba(10,132,255,0.18);
+  outline-offset: 2px;
+}
+
+/* Pseudo-element used for ripple effect */
+.btn::after{
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: var(--ripple-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 600ms cubic-bezier(.2,.8,.2,1), opacity 600ms ease;
+}
+
+/* Class toggled by JS to animate ripple */
+.btn.ripple-animate::after{
+  transform: translate(var(--ripple-x), var(--ripple-y)) scale(40);
+  opacity: 1;
+  transition: transform 600ms cubic-bezier(.2,.8,.2,1), opacity 600ms ease;
+}
+
+/* Pressed state */
+.btn:active{
+  transform: translateY(-1px) scale(.995);
+}
